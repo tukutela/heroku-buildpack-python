@@ -213,6 +213,10 @@ source $BIN_DIR/steps/libffi
 puts-step "Installing GDATA."
 pip install gdata --upgrade
 
+#installing pyopenssl
+puts-step "Installing PyOpenSSL."
+pip install pyopenssl --upgrade
+
 # Install Mercurial if it appears to be required.
 if (grep -Fiq "hg+" requirements.txt) then
   bpwatch start mercurial_install
